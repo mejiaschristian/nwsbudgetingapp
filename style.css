@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Montserrat:wght@300;400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+}
+
+body {
+    padding: 10px;
+    background-color: #1e201e;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.title-container h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.title-container p {
+    text-align: center;
+    padding: 5px;
+    max-width: 60vw;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 1vh;
+}
+
+input {
+    padding: 10px;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #1e201e;
+    transition: background-color 0.2s ease-in-out;
+}
+
+input:hover {
+    background-color: #c9c9c9;
+}
+
+button {
+    background-color: #4caf50;
+    color: #ffffff;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #37773a;
+}
+
+.form-container {
+    text-align: center;
+}
+
+.result-container {
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.result-container h2 {
+    text-align: center;
+}
+
+.radio-label {
+    font-size: 1.2rem;
+    border: 1px solid #2d2e2d;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer; /* Show pointer cursor to indicate clickable area */
+    transition: background-color 0.2s ease-in-out;
+}
+
+.radio-label:hover {
+    background-color: #1a1a1a;
+}
+
+.radio-label input[type="radio"] {
+    transform: scale(1.2);
+    width: 15px;
+}
+
+.radio-label b {
+    margin: 5px; /* Space between the percentage and the bold text */
+}
+
+#extraInputs {
+    display: none;
+}
+
+#extraInputs button {
+    margin: 10px;
+}
+
+#remaining {
+    max-width: fit-content;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.glow {
+    animation: glow-animation 1s ease-in-out;
+}
+
+@keyframes glow-animation {
+    0% {
+        text-shadow: 0px 0px 10px #ffffff24;
+    }
+    25% {
+        text-shadow: 0px 0px 10px #ffff;
+    }
+    50% {
+        text-shadow: 0px 0px 10px #ffffffbb;
+    }
+    75% {
+        text-shadow: 0px 0px 10px #ffffff7c;
+    }
+    100% {
+        text-shadow: 0px 0px 10px #ffffff36;
+    }
+}
+
+@media (max-width: 610px) {
+    .title-container p {
+        max-width: 100%;
+    }
+    form {
+        width: 100%; /* Ensure the form container is full width */
+        padding: 0 10px; /* Optional: Add some padding to the form */
+    }
+    input, button {
+        margin: 0 auto;
+        margin-top: 10px;
+        width: 100%; /* Ensure 100% width for input and button */
+    }
+    .radio-label input[type="radio"] {
+        margin: 10px;
+    }
+    .result-container {
+        margin: 10px;
+        padding: 0;
+        max-width: 100%;
+    }
+    .radio-label {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+    #extraInputs button {
+        margin: 0;
+        margin-top: 10px;
+    }
+    #remaining {
+        margin-top: 10px;
+    }
+}
+

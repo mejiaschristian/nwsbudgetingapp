@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="NWS Budgeting App" />
+    <meta
+      property="og:description"
+      content="This budgeting app will help you prioritize your needs and wants
+      based on your budget. Choose your desired percentage for each
+      category (50% for needs, 30% for wants, 20% for savings)."
+    />
+    <meta property="og:image" content="tutel.gif" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="tutel.gif" />
+    <title>NWS Budgeting App</title>
+</head>
+<body>
+    <div class="title-container">
+        <h1>Needs, Wants, and Savings Budgeting App</h1>
+        <p>
+            This budgeting app will help you prioritize your needs and wants
+            based on your budget. Choose your desired percentage for each
+            category (50% for needs, 30% for wants, 20% for savings).
+        </p>
+    </div>
+    <div class="form-container">
+        <form method="post">
+            <label for="budget">Input your budget:
+                <input type="number" name="budget" id="budgetid" />
+            </label>
+            <button type="button" id="calculateButton">
+                Calculate 50/30/20
+            </button>
+        </form>
+
+        <!-- Result Section -->
+        <div id="result" class="result-container" style="display: none;">
+            <h2 id="budgetDisplay">Budget: </h2>
+            <h3>Choose a budget</h3>
+            <label class="radio-label">
+                <input type="radio" name="budgetChoice" id="needRadio" value="" />
+                50%: <b id="budget50Display"></b> for NEEDS
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="budgetChoice" id="wantRadio" value="" />
+                30%: <b id="budget30Display"></b> for WANTS
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="budgetChoice" id="emergencyRadio" value="" />
+                20%: <b id="budget20Display"></b> for SAVINGS
+            </label>
+        </div>
+
+        <!-- Extra Inputs -->
+        <div id="extraInputs" style="display: none;">
+            <label for="moneyspent">How much money did/will you spend?:
+                <input type="number" name="spent" id="moneyspent" /> <br />
+            </label>
+            <button id="calculateSpentButton">Calculate Remaining</button>
+            <div id="remaining"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
