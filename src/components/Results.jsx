@@ -66,6 +66,10 @@ const Results = ({ budget, selectedPlan }) => {
     return (
         <div className="text-xl text-center flex flex-col gap-2">
             <h2 className="text-2xl font-semibold">Results:</h2>
+            <h2 className="text-2xl">
+                Total Amount Left:{" "}
+                <span className="font-bold">{remainingBudget}</span>
+            </h2>
             <div className="flex flex-wrap gap-2 justify-center">
                 <Display
                     budgetType="Needs"
@@ -86,10 +90,6 @@ const Results = ({ budget, selectedPlan }) => {
                     onInputChange={setSavingsAmount}
                 />
             </div>
-            <h2 className="text-2xl">
-                Total Amount Left:{" "}
-                <span className="font-bold">{remainingBudget}</span>
-            </h2>
         </div>
     );
 };
